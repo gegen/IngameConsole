@@ -2,7 +2,7 @@ fx_version 'adamant'
 games {'gta5'}
 
 author 'gegen#4674'
-version '1.1'
+version '1.2'
 description 'FiveM Ingame Console'
 
 
