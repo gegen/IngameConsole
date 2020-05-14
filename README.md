@@ -1,4 +1,4 @@
-# IngameConsole
+# FiveM Ingame Console
 An in game console for FiveM with original Windows cmd look including color support. Execute commands from ingame and see feedback, ideal for debuging.
 Example commands: start, stop, restart, status, clientkick, tempban etc. Also supports ESX and commands from any other framework.
 
