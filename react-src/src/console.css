@@ -1,0 +1,87 @@
+
+/*cmd colors:*/
+.color-0{color: #ffffff;}
+.color-1{color: #ff4444;}
+.color-2{color: #16c60c;}
+.color-3{color: #f9f1a5;}
+.color-4{color: #3b78ff;}
+.color-5{color: #33b5e5;}
+.color-6{color: #dd00c3;}
+.color-8{color: #cc0000;}
+.color-9{color: #0037da;}
+
+.wrapper {
+    position: absolute;
+    left: 50%;
+    top: 15%;
+    transform: translate(-50%, 0);
+    width: 50%;
+    height: 45%;
+    font-family: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+    font-size: 14px;
+    line-height: 16px;
+    background-color: #0037da;
+}
+
+.TopBar {
+    display: inline-block;
+    width: stretch;
+    background-color: white;
+    padding: 10px 15px;
+    font-weight: 1000;
+}
+
+#cclose{
+    float: right;
+}
+
+.console {
+    display: block;
+    width: stretch;
+    height: stretch;
+    padding: 10px 10px 5px 10px;
+    overflow: scroll;
+    white-space: pre;
+    text-align: left;
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+}
+
+.consoleInput {
+    display: block;
+    width: 100%;
+    font-size: 14px;
+    padding: 10px 20px;
+    margin: 0;
+    font-family: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+    border-radius: 0;
+}
+
+.consoleInput::placeholder {
+    color: rgb(172, 172, 172)
+}
+
+/* Not Compatibal with FiveM
+.console::-webkit-scrollbar {
+    width: 10px;
+}
+.console::-webkit-scrollbar-track {
+    background-color: #1E252D;
+    border-right: 1px solid #1E252D;
+    border-left: 1px solid #1E252D;
+}
+.console::-webkit-scrollbar-thumb {
+    background-color: #565C62;
+}
+.console::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.console::-webkit-scrollbar-corner {
+    background: transparent;
+}
+*/

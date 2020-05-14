@@ -1,0 +1,29 @@
+.Box {
+    position: absolute;
+    left: 50%;
+    top: 15%;
+    transform: translate(-50%, 0);
+    min-width: 30%;
+    min-height: 50px;
+    background-color: rgb(71, 71, 71);
+    text-align: center;
+    border: 2px solid rgb(177, 177, 177);
+    border-radius: 7px;
+    padding: 25px;
+    padding-top: 15px;
+    color: white;
+}
+
+button.smallbtn {
+    padding: .2rem .5rem;
+}
+
+button.outlinebtn{
+    color: rgb(179, 179, 179);
+    background-color: transparent;
+    border-color: rgb(179, 179, 179);
+}
+button.outlinebtn:hover {
+    color: white;
+    background-color: rgb(58, 58, 58);
+}
