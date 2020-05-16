@@ -1,4 +1,5 @@
 local display = false
+local resourceNameIsValid = false
 
 function SetDisplay(bool)
     display = bool
@@ -31,16 +32,30 @@ AddEventHandler("console:ErrorMsg", function(error)
     })
 end)
 
-RegisterCommand('console', function() SetDisplay(true) end, false)
+RegisterCommand('console', function()
+    if resourceNameIsValid then
+        SetDisplay(true)
+    else
+        TriggerEvent('chat:addMessage', {
+            color = { 255, 0, 0},
+            multiline = true,
+            args = {"Error", "'"..GetCurrentResourceName().."' is not a valid resource name. You may only use lowercase characters, - or _"}
+        })
+    end
+end, false)
 
 -- Initializing:
 Citizen.CreateThread(function()
     Wait(1000) -- Make sur NUI has loaded
-    SendNUIMessage({
-        type = "ResourceName",
-        value = GetCurrentResourceName()
-    })
-    SetDisplay(false)
+    
+    if string.match(GetCurrentResourceName(), '[^a-z-_]') == nil then -- Make sure resource name is valid for NUI
+        resourceNameIsValid = true
+        SendNUIMessage({
+            type = "ResourceName",
+            value = GetCurrentResourceName()
+        })
+        SetDisplay(false)
+    end
 
     -- Main Loop:
     while true do 
